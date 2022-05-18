@@ -15,5 +15,5 @@ a.out은 현재 디렉토리의 a파일을 char buff[50] 크기만큼(49개 + nu
 
 js내에서 child process를 만들어서 exec을 실행시키는 방식으로 진행된다.  
 콜백 함수로 err,stdout,stdin 3개 다 받아올 수 있고, 지금 상황에서는 stdout으로 나오는 값을 받을 것이다.  
-콜백의 stdout을 console에 출력하는 간단한 예제이다.  
+콜백의 stdout을 console에 출력하는 간단한 예제이다. 
 

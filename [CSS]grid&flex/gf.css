@@ -1,0 +1,42 @@
+.contentcenterall > *{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flexcontainer{
+    /* 플렉스 */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* 상자 */
+    border: 1px solid red;
+    height: 25vh;
+    /* 마진 */
+    margin-bottom: 1vh;
+
+    
+}
+
+.flexcontainer > div {
+    border: 1px solid;
+    height: 10vh;
+    width: 10vh;
+    overflow: auto;
+}
+
+
+.gridcontainer{
+    display: grid;
+    border: 1px solid red;
+    /* 크기 */
+    height: 25vh;
+    /* 그리드 */
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+
+}
+
+.gridcontainer > div {
+    border: 1px solid;
+}

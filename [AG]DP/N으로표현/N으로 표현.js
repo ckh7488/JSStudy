@@ -27,7 +27,6 @@ function solution(N, number) {
                 }
             }
         }
-        console.log(memo)
         if(memo[i].has(number)) return i;
     }
     return -1;

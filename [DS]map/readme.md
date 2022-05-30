@@ -38,11 +38,10 @@ balanced-binary tree군 중, 이 rb-tree가 좋은 점은 삽입/삭제가 조�
 ### TimeComplexity  
 일반적인 경우의 속도이다.  
 
-Ds | Find | Insert | Erase
---- | --- | --- | --- | ---
+DS | Find | Insert | Erase
+--- | --- | --- | --- 
 map | log(n) | log(n) | log(n)
 unordered_map | 1 | 1 | 1
-
 
 두 데이터 구조 모두 메모리는 데이터의 양 n에 선형적으로 비례한다.  
 

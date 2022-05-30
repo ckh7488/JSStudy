@@ -46,8 +46,7 @@ unordered_map | 1 | 1 | 1
 
 두 데이터 구조 모두 메모리는 데이터의 양 n에 선형적으로 비례한다.  
 
-Markdown | Find | Insert | Erase
---- | --- | --- | --- | ---
-map | logN | logN | logN
-umap | 1 | 1 | 1
+Markdown | Find | Insert
+--- | --- | --- | ---
+map | logN | logN
 

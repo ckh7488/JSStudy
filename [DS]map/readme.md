@@ -43,6 +43,7 @@ DataStructure | 접근(find) | 추가(insert) | 삭제(erase)
 map | log(n) | log(n) | log(n)
 unordered_map | 1 | 1 | 1
 
+
 두 데이터 구조 모두 메모리는 데이터의 양 n에 선형적으로 비례한다.  
 
 Markdown | Less | Pretty

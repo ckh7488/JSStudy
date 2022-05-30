@@ -48,5 +48,4 @@ unordered_map | 1 | 1 | 1
 
 Markdown | Find | Insert
 --- | --- | --- | ---
-map | logN | logN
 

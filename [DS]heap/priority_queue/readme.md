@@ -18,7 +18,7 @@ priority_queue<vector<int>, vector<vector<int>>, cmp1> pq;
   
   
 #### 값 추가 삭제  
-`pq.push()`		:	큐에 값을 추가.  
-`pq.pop()`		:	큐에 맨 위의 값을 제거.  
+`pq.push()`		:	큐 값을 추가.  
+`pq.pop()`		:	큐의 맨 위의 값을 제거.  
   
   

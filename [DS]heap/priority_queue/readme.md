@@ -14,11 +14,11 @@ priority_queue<vector<int>, vector<vector<int>>, cmp1> pq;
 #### 내부 확인  
 `pq.top()`		:	맨 위의 값을 알려줌. (큐에서 빼지는 않음)  
 `pq.empty()`	:	true/false 로 비어있는지 확인 가능.  
-`pq.size()`		:	현재 큐의 사이즈 확인.  
+`pq.size()`		:	현재 큐 사이즈 확인.  
   
   
 #### 값 추가 삭제  
-`pq.push()`		:	큐 값을 추가.  
-`pq.pop()`		:	큐의 맨 위의 값을 제거.  
+`pq.push()`		:	값을 추가.  
+`pq.pop()`		:	맨 위의 값을 제거.  
   
   

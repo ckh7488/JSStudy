@@ -1,6 +1,6 @@
 # Json&text express 와 클라이언트
 
-## 간단한 패턴.
+
 
 | Express |client  |
 |--|--|

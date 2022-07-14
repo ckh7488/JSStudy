@@ -29,3 +29,17 @@ async asyncFun (){
 지금 예제에선 없으므로, 다음 async 함수를 또 실행한다.
 
 이런식으로 진행되므로, 5초보다 아주 약간 더 끌고 종료된다. (대충 5.01~50.2 사이 인듯하다)
+
+for loop 형태에서 순서를 맞추고 싶다면,
+```javascript
+async forFun(){
+	for(let i of someIterable){
+		await someAsyncFun();
+	}
+}
+```
+이런식으로 하면 someAsyncFun 이 끝날때까지 이 forFun 함수는 잠시 진행을 멈추고 제어를 넘겼다가 await 이끝나고 스케쥴링을 통해 제어가 돌아오면 다음 someAsyncFun 을 실행하고 제어를 다시 넘기는 식으로 반복되어 진행된다.
+
+#### 결론
+async await 은 async 함수 자신의 내부에서만 await으로 순서가 맞춰진다.
+async 함수끼리에서의 관계에서는 await마다 자신을 호출했던 코드에 다시 제어를 넘겨주고, await이 끝나서 다시 event queue에 돌아와서 자신의 실행 타이밍에 다시 실행되는 방식으로 진행된다.

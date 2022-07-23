@@ -1,0 +1,29 @@
+### 개요
+32bit 시스템에서
+int num = 1234; 를 바이트 단위로 끊으면
+
+  1byte      1byte    1byte     1byte
+0000 0000 0000 0000 0000 0100 1101 0010
+0      0    0    0    0    4   D    2
+이런 형식이 된다.
+이를 1byte씩 끊어서 보려면,
+
+***C++
+	int num = 1234;
+	unsigned char readonebyte = *(&num);
+	unsigned char* p = (unsigned char*)&num;
+	printf("%02X,%02X", readonebyte, *(p+1))
+***
+
+형변환을 두방식으로 했는데,
+
+unsigned char readonebyte = *(&num);
+여기서는 주소값을 바로 참조하는 형태이다.
+이럴 경우, num 주소값에서 바로 1바이트를 읽어서 ihl에 넣어준다.
+시스템에 따라 다를 수 있지만, 일반 컴퓨터로는 D2를 읽어오게 된다. (16진수로 읽을 경우)
+이경우, 포인터로 읽은게 아니므로 readonebyte+1 을 할 경우 D3가 된다.
+
+unsigned char* p = (unsigned char*)&num;
+여기서는 주소값을 char형태의 포인터로 받는다(주소값으로 부터 1바이트 씩 읽겠다는 뜻).
+주소값이 그대로 들어오며, p+1 은 04를 가리키는 주소값을 의미한다. 이를 참조하는 *을 붙이면 04가 된다.
+
